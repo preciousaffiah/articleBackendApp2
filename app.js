@@ -39,6 +39,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/user", UserRouter);
 
-app.listen(process.env.PORT || 3000, () =>{
+app.listen(process.env.PORT || 3001, () =>{
     console.log(`listening to port ${process.env.PORT}`);
 })
