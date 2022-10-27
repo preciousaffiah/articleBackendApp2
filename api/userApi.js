@@ -28,6 +28,7 @@ router.get("/", (req, res) => {
     //     return res.redirect("/admin");
     // }
     res.sendFile("index.html");
+    console.log('it is working');
     // res.sendFile("it is working");
 });
 

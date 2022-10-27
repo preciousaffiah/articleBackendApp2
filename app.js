@@ -12,7 +12,6 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const db = require("./connection");
 
-require('dotenv').config();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -39,6 +38,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/user", UserRouter);
 
-app.listen(process.env.PORT || 3001, () =>{
-    console.log(`listening to port ${process.env.PORT}`);
+app.listen(3001, () =>{
+    console.log("listening to port 3001");
 })
