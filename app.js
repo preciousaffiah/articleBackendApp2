@@ -21,7 +21,8 @@ app.use(session({secret: 'shhhhh', saveUninitialized: true,resave: true}));
 app.use(cookieParser());
 
 // this is CORS
-const cors = require("cors"); 
+const cors = require("cors");
+const port = process.env.PORT || 3000; 
 
 
 app.use(
@@ -38,6 +39,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/user", UserRouter);
 
-app.listen(3001, () =>{
-    console.log("listening to port 3001");
+app.listen(port, () =>{
+    console.log(`listening to port ${port}`);
 })

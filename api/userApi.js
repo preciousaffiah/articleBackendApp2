@@ -27,8 +27,8 @@ router.get("/", (req, res) => {
     // if (sess.email) {
     //     return res.redirect("/admin");
     // }
-    res.sendFile("index.html");
-    console.log('it is working');
+    // res.sendFile("index.html");
+    res.send('it is working')
     // res.sendFile("it is working");
 });
 

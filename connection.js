@@ -10,8 +10,8 @@ const connectionParams = {
     useUnifiedTopology: true,
 }
 
-const uri = `mongodb+srv://${user}:${password}@cluster0.di9pr.mongodb.net/?retryWrites=true&w=majority`
-const connection = mongoose.connect(uri, connectionParams).then(()=>console.log('connected to cloud atlas'))
+// const uri = `mongodb+srv://${user}:${password}@cluster0.di9pr.mongodb.net/?retryWrites=true&w=majority`
+const connection = mongoose.connect(process.env.MONGODB_URI, connectionParams).then(()=>console.log('connected to cloud atlas'))
 .catch((err)=>console.log(err));
 
 module.exports = connection  
